@@ -1,7 +1,7 @@
 package edu.escuelaing.arep.app;
 
+import edu.escuelaing.arep.stat.Stat;
 import edu.escuelaing.arep.util.LinkedList;
-import stat.Stat;
 
 /**
  * Hello world!

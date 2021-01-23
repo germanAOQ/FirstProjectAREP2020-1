@@ -1,4 +1,4 @@
-package stat;
+package edu.escuelaing.arep.stat;
 
 import java.util.List;
 
