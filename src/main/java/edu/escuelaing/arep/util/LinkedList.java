@@ -94,7 +94,8 @@ public class LinkedList<E> implements List<E> {
 			temp = temp.getNext();
 		}
 		temp.setNext(temp.getNext().getNext());
-		return false;
+		size = size-1;
+		return true;
 	}
 
 	public E remove(int index) {
