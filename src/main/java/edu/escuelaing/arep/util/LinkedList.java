@@ -5,22 +5,27 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class LinkedList<E> implements List<E>{
+public class LinkedList<E> implements List<E> {
 
 	Node<E> first = null;
 	Node<E> last = null;
 	int size = 0;
-	
+
 	public boolean add(E e) {
 		Node n = new Node(e);
-		n.setNext(first);
-		first = n;
-		size = size+1;
+		if (size == 0) {
+			first = n;
+			last = first;
+		} else {
+			last.setNext(n);
+			last = n;
+		}
+		size = size + 1;
 		return true;
 	}
 
 	public void add(int index, E element) {
-		
+
 	}
 
 	public boolean addAll(Collection<? extends E> c) {
@@ -35,7 +40,7 @@ public class LinkedList<E> implements List<E>{
 
 	public void clear() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public boolean contains(Object o) {
@@ -84,13 +89,17 @@ public class LinkedList<E> implements List<E>{
 	}
 
 	public boolean remove(Object o) {
-		// TODO Auto-generated method stub
+		Node<E> temp = first;
+		while(!temp.getNext().getData().toString().equals(o.toString())) {
+			temp = temp.getNext();
+		}
+		temp.setNext(temp.getNext().getNext());
 		return false;
 	}
 
 	public E remove(int index) {
-		// TODO Auto-generated method stub
 		return null;
+
 	}
 
 	public boolean removeAll(Collection<?> c) {
@@ -125,6 +134,10 @@ public class LinkedList<E> implements List<E>{
 	public <T> T[] toArray(T[] a) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public E getFirst() {
+		return this.first.getData();
 	}
 
 }

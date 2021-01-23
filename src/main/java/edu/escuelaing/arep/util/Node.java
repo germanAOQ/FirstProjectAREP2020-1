@@ -2,8 +2,8 @@ package edu.escuelaing.arep.util;
 
 public class Node<E> {
 	
-	E data = null;
-	Node<E> next = null;
+	private E data = null;
+	private Node<E> next = null;
 	
 	public Node(E data) {
 		this.data = data;
