@@ -4,8 +4,19 @@ import java.util.List;
 
 import edu.escuelaing.arep.stat.exceptions.StatException;
 
+/**
+ * The Class Stat.
+ */
 public class Stat {
 	
+	
+	/**
+	 * Mean.
+	 *
+	 * @param lval Lista que contiene números reales.
+	 * @return La media de los números presentes en la lista.
+	 * @throws StatException si el número de elementos presentes en la lista es igual cero.
+	 */
 	public static Double mean(List<Double> lval) throws StatException{
 		if(lval.size() == 0) throw new StatException(StatException.DIVISION_CERO);
 		Double suma = 0.0;
@@ -16,6 +27,13 @@ public class Stat {
 		return Math.round(mean*100.0)/100.0;
 	}
 	
+	/**
+	 * Stddev.
+	 *
+	 * @param lval Lista que contiene números reales
+	 * @return La desviación estándar de los números presentes en la lista.
+	 * @throws StatException si el número de elementos presentes en la lista es igual cero.
+	 */
 	public static Double stddev(List<Double> lval) throws StatException{
 		if(lval.size() == 0) throw new StatException(StatException.DIVISION_CERO);
 		Double mean = mean(lval);

@@ -5,11 +5,16 @@ import edu.escuelaing.arep.stat.exceptions.StatException;
 import edu.escuelaing.arep.util.LinkedList;
 
 /**
- * Hello world!
- *
+ * Hello world!.
  */
 public class App
 {
+    
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main( String[] args )
     {
     	    	
@@ -24,10 +29,13 @@ public class App
         lista.add(1657.0);
         lista.add(624.0);
         lista.add(1503.0);
-        lista.remove(591.0);
-        for(Double d: lista) {
-			System.out.println(d);
-		}
+	try{
+		System.out.println("Media: "+Stat.mean(lista));
+		System.out.println("Desviacion estandar: "+Stat.stddev(lista));
+	}catch(StatException e){
+		
+	}
+		
         
     }
 }
