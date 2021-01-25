@@ -59,6 +59,31 @@ Los resultados obtenidos fueron los siguientes:
 |Prueba 3| Columna 2 | Cálculo de la media de los datos presentes | 60.32| 60.32|
 |Prueba 4| Columna 2 | Cálculo de la desviación estándar de los datos presentes | 62.26| 62.26|
 
+## Documentación
+
+### Generar documentación
+Para generar la documentación se debe agregar al código del archivo de configuración de Maven, POM.xml, el siguiente plugin:
+```
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-javadoc-plugin</artifactId>
+	<executions>
+		<execution>
+			<id>attach-javadocs</id>
+			<goals>
+				<goal>jar</goal>
+			</goals>
+		</execution>
+	</executions>
+</plugin>
+
+```
+Uno vez agregado el plugin anterior, se ejecuta el siguiente comando para generar el javadoc
+```
+mvn install
+```
+Finalmente, en la carpeta target quedará creada un archivo con el nombre **apidocs**, lugar en donde se encontrará la documentación.
+
 ## Construido con 
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [Git](https://github.com/) - Control de versionamiento
