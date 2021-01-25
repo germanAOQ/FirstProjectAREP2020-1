@@ -1,7 +1,7 @@
 # Introducción a Sistemas Complejos, Java, Maven and Git                  
 Haciendo uso Java, Maven y Git se escribió un programa para cacular la media y la desviación estándar de una serie de números reales. Esta serie de numeros se almacena con la ayuda de una linked list, hecha a partir de una implementación personal.
 ## Comenzando
-Para obtener una copia del proyecto en tu máquina local y puedas realizar tareas de desarrollo, pruebas o ejecuciones debes clonarlo utilizando el siguiente comando:
+Para obtener una copia del proyecto en nuestra máquina local y podamos realizar tareas de desarrollo, pruebas o ejecuciones debemos clonarlo utilizando el siguiente comando:
 ```
 git clone https://github.com/germanAOQ/FirstProjectAREP2020-1
 ```
@@ -82,7 +82,7 @@ Uno vez agregado el plugin anterior, se ejecuta el siguiente comando para genera
 ```
 mvn install
 ```
-Finalmente, en la carpeta target quedará creada un archivo con el nombre **apidocs**, lugar en donde se encontrará la documentación.
+Finalmente, en la carpeta target quedará creado un archivo con el nombre **apidocs**, lugar en donde se encontrará la documentación.
 
 ## Construido con 
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
